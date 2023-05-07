@@ -1,5 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {handleLogin} from './index';
+import {showToast} from '../../utils/helpers';
 
 const initialState = {
   isLoggedIn: false,
@@ -21,15 +22,15 @@ export const authSlice = createSlice({
     builder.addCase(handleLogin.pending, state => {
       state.error = null;
     });
-
     builder.addCase(handleLogin.fulfilled, (state, {payload}) => {
       state.token = payload.token;
       state.error = null;
       state.isLoggedIn = true;
+      showToast('Success');
     });
-
     builder.addCase(handleLogin.rejected, (state, {payload}) => {
       state.error = payload.error;
+      showToast('Error');
     });
   },
 });

@@ -1,10 +1,9 @@
 import Axios from 'axios';
-// import {Config} from 'react-native-config';
+import {Config} from 'react-native-config';
 
 export function unAuthenticatedInstance() {
   return Axios.create({
-    baseURL: 'https://dummyjson.com/',
-    // baseURL: Config.API_URL,
+    baseURL: Config.API_URL,
   });
 }
 
