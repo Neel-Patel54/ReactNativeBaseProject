@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {handleLogin} from './index';
-import {showToast} from '../../utils/helpers';
+import {showToast} from '@utils/helpers';
 
 const initialState = {
   isLoggedIn: false,

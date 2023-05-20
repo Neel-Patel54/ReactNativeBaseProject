@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSelector } from 'react-redux';
 import Toast from 'react-native-toast-message';
-import RootNavigator from './navigations/RootNavigator';
-import Loader from './components/Loader';
+import RootNavigator from '@navigations/RootNavigator';
+import Loader from '@components/Loader';
 
 const AppContainer = () => {
     const isLoading = useSelector((state) => state.loader.isLoading);

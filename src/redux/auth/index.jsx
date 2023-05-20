@@ -1,5 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
-import {callPostAPI} from '../../utils/axios';
+import {callPostAPI} from '@utils/axios';
 import { loadingStart, loadingEnd } from '../loader/slice';
 
 export const handleLogin = createAsyncThunk(

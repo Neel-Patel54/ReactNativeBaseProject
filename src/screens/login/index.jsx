@@ -2,10 +2,10 @@ import React from 'react';
 import { Text ,View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { Formik } from 'formik';
-import { loginValidationSchema } from '../../utils/validations';
-import {handleLogin} from '../../redux/auth/index';
-import CommonTextInput from '../../components/CommonTextInput';
-import CommonButton from '../../components/CommonButton';
+import { loginValidationSchema } from '@utils/validations';
+import {handleLogin} from '@redux/auth/index';
+import CommonTextInput from '@components/CommonTextInput';
+import CommonButton from '@components/CommonButton';
 import {styles} from './styles';
 
 const LoginScreen = () => {
